@@ -36,3 +36,19 @@
     transform: rotate(360deg);
   }
 }
+
+div {
+  margin: 20px;
+}
+
+.title {
+  font-family: 'Knewave', cursive;
+  font-size: 60px;
+  padding: 0.5em;
+}
+
+.artist {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  padding: 0.5em;
+}
