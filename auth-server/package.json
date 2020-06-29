@@ -9,5 +9,9 @@
     "cors": "^2.8.4",
     "querystring": "~0.2.0",
     "request": "~2.83.0"
+  },
+  "scripts": {
+    "start": "node -r dotenv/config authorization_code/app.js",
+    "test": "standard"
   }
 }
