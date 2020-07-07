@@ -6,12 +6,8 @@ var cookieParser = require('cookie-parser');
 
 var client_id = process.env.CLIENT_ID_KEY;
 var client_secret = process.env.CLIENT_SECRET_KEY;
-var herokuport = 'https://musician-stans.herokuapp.com/';
-var redirect_uri = 'https://musician-stans.herokuapp.com/spotify/callback';
-
-// local hosting
-var local_redirect_uri = 'http://localhost:8888/callback';
-var localport = 'http://localhost:3000/#';
+var redirect_uri = process.env.REDIRECT_URI + 'callback';
+var port = 'http://localhost:3000/#';
 
 /**
  * Generates a random string containing numbers and letters
@@ -107,7 +103,7 @@ app.get('/callback', function (req, res) {
 
         // we can also pass the token to the browser to make requests from there
         res.redirect(
-          herokuport +
+          port +
             querystring.stringify({
               access_token: access_token,
               refresh_token: refresh_token,
