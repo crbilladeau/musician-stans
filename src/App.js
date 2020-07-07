@@ -3,6 +3,8 @@ import './App.css';
 import Spotify from 'spotify-web-api-js';
 import Button from 'react-bootstrap/Button';
 
+const redirect_url = 'http://localhost:8888/';
+
 const spotifyWebApi = new Spotify();
 
 class App extends React.Component {
@@ -70,7 +72,7 @@ class App extends React.Component {
       <div className='App'>
         <h1 className='title'>WHICH MUSICIAN DO YOU STAN?</h1>
         {!this.state.loggedIn ? (
-          <a href='http://localhost:8888/'>
+          <a href={`${redirect_url}`}>
             <Button
               style={{
                 backgroundColor: '#1DB954',
